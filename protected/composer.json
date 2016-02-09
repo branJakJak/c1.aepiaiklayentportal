@@ -1,0 +1,16 @@
+{
+    "name": "kevin/protected",
+    "authors": [
+        {
+            "name": "kebyang",
+            "email": "kelvo_link@yahoo.com"
+        }
+    ],
+    "require-dev": {
+    },
+    "require": {
+        "sunra/php-simple-html-dom-parser": "v1.5.0",
+        "zf1/zend-mail": "^1.12",
+        "guzzlehttp/guzzle": "^6.1"
+    }
+}
