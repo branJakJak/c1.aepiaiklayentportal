@@ -13,7 +13,8 @@ class LeadsStatusDataProvider extends CArrayDataProvider
             $combinedLeadData[] = array(
             "id"=>$currentRowKey,
                 "status"=>$currentRowValue['status_name'],
-                "lead"=>intval($currentRowValue['COUNT(vicidial_list.lead_id)'])
+                // "lead"=>intval($currentRowValue['COUNT(vicidial_list.lead_id)']),
+                "lead"=>intval(0)
             );
         }
         $this->data = $combinedLeadData;

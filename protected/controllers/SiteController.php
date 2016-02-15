@@ -45,6 +45,13 @@ class SiteController extends Controller
 		$chartDataObj = new ChartDataProvider($leadsAndStatusDataProvider->data);
 		$chartDataProvider = $chartDataObj->getData();
 
+
+		/**
+		 * Counter
+		 */
+		$total_submitted_today = BarryOptLog::getCountToday();
+		$total_submitted_all = BarryOptLog::getCountAll();
+
 		/* client data */
 		$clientVb = Yii::app()->askteriskDb->createCommand("select * from client_panel")->queryAll();
 		$clientj6 = Yii::app()->askteriskDb->createCommand("select * from clientj6_sec_today")->queryAll();

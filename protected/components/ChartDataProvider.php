@@ -13,10 +13,12 @@ class ChartDataProvider
 	{
 		$chartDataProvider = array();
 		foreach ($this->rawData as $key => $value) {
+
         $chartDataProvider[]  = array(
         			"name"=>$value['status'],
         			"y"=>$value['lead'],
-        	);		
+        	);
+
     	}
         return $chartDataProvider;
 	}

@@ -67,7 +67,7 @@ Yii::app()->clientScript->registerScript($updateEvery60, $updateEvery60, CClient
             <h5>
                 <span class="icon-download"></span>
                 <?php
-                    echo CHtml::link("Export Data <span class='label label-info'>".BarryOptLog::getCountAll()."</span>", array('/export'));
+                    echo CHtml::link("Export Data <span class='label label-info'>".$total_submitted_all."</span>", array('/export'));
                 ?>
             </h5>
             <hr>
@@ -75,7 +75,7 @@ Yii::app()->clientScript->registerScript($updateEvery60, $updateEvery60, CClient
                 <span class="icon-calendar"></span>
 
                 <?php
-                    echo CHtml::link("Export Today  <span class='label label-info'>".BarryOptLog::getCountToday()."</span>",  array('/export/today'));
+                    echo CHtml::link("Export Today  <span class='label label-info'>".$total_submitted_today."</span>",  array('/export/today'));
                 ?>
             </h5>
             <hr>
@@ -94,7 +94,7 @@ Yii::app()->clientScript->registerScript($updateEvery60, $updateEvery60, CClient
                     <?php
                         echo CHtml::link("Clear Data", array('/clearData'), array('confirm'=>"Are you sure you want to clear the data ?"));
                     ?>
-                </h5>                
+                </h5>
             <?php endif ?>
 
             <?php $this->endWidget(); ?>
@@ -167,12 +167,14 @@ Yii::app()->clientScript->registerScript($updateEvery60, $updateEvery60, CClient
                 array(
                     'header' => 'Balance',
                     'type' => 'raw',
-                    'value' => '$data["balance"]',
+                    // 'value' => '$data["balance"]',
+                    'value' => '"0"',
                 ),
                 array(
                     'header' => 'Credit Used',
                     'type' => 'raw',
-                    'value' => '$data["total"]',
+                    // 'value' => '$data["total"]',
+                    'value' => '"0"',
                 ),
                 // array(
                 //     'header' => 'Total Calls Made',
@@ -182,13 +184,15 @@ Yii::app()->clientScript->registerScript($updateEvery60, $updateEvery60, CClient
                 array(
                     'header' => 'Dialable Leads',
                     'type' => 'raw',
-                    'value' => '$data["leads"]',
+                    // 'value' => '$data["leads"]',
+                    'value' => '"0"',
                 ),
 
                 array(
                     'header' => '5 PRESS',
                     'type' => 'raw',
-                    'value' => '$data["cxfer"]',
+                    // 'value' => '$data["cxfer"]',
+                    'value' => '"0"',
                 ),
                 // 'total',
                 // 'balance',
@@ -201,7 +205,8 @@ Yii::app()->clientScript->registerScript($updateEvery60, $updateEvery60, CClient
                 array(
                     'header'=>'Total Minutes',
                     'type'=>'raw',
-                    'value'=>'$data["minutes"]',
+                    // 'value'=>'$data["minutes"]',
+                    'value' => '"0"',
                 ),
                 // array(
                 //     'header'=>'Seconds',
